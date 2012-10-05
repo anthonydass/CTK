@@ -277,7 +277,7 @@ bool addToAvailableData(ctkDicomAppHosting::AvailableData& data,
   locator.offset = offset;
   locator.length = length;
   locator.transferSyntax = objectDescriptor.transferSyntaxUID;
-  locator.URI = uri;
+  locator.URI.setUrl(uri);
 
   objectLocatorCache->insert(objectDescriptor.descriptorUUID, locator);
   return true;

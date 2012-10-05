@@ -25,6 +25,7 @@
 // Qt includes
 #include <QString>
 #include <QList>
+#include <QUrl>
 
 #ifdef ERROR
 # error Try to reorder include files (this one first)       \
@@ -76,7 +77,8 @@ namespace ctkDicomAppHosting {
     QString transferSyntax;
     qint64 length;
     qint64 offset;
-    QString URI;
+	QUrl	URI;
+    //QString URI;
   };
 
   //----------------------------------------------------------------------------

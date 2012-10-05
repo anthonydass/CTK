@@ -598,7 +598,7 @@ ctkDicomSoapObjectLocator::ctkDicomSoapObjectLocator(const QString& name,
   
   this->insert(new QtSoapSimpleType(
                  QtSoapQName("URI"),
-                 ol.URI) );
+				 QString(ol.URI.toEncoded())) );
 
   this->insert(new ctkDicomSoapUUID("Locator",
                                     ol.locator) );
